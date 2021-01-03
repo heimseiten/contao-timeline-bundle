@@ -1,0 +1,44 @@
+body {
+	@mixin item_right { 
+		margin-left: auto; margin-right: 0; text-align: left; 
+		&:before { left: 0; right: auto; }
+		&:after { left: 0; right: auto; }
+		i { right: auto; left: -6px; }
+	}
+	.ce_timeline_single { width: 50%; margin-left: 0; padding: 0; overflow: visible; text-align: right;
+		--line_width: 100px;
+		--timeline_lines_color_bg_default: #989898;
+		--timeline_year_color_text_default: #fff;
+		--timeline_year_color_bg_default: #d10000;
+		@media(max-width:767px){ width: 100%; @include item_right; margin: 0 5% !important; }
+		.inside { max-width: 700px; display: inline-block; }
+		&:before { content: ''; position: absolute; right: 0; top: 10px; height: 1px; background: var(--timeline_lines_color_bg,var(--timeline_lines_color_bg_default)); width: var(--line_width); }
+		&:after { content: ''; width: 2px; background: var(--timeline_lines_color_bg,var(--timeline_lines_color_bg_default)); position: absolute; top: 4px; right: -1px; height: 100%; margin-left: -1px; }
+		.year { position: relative; top: -5px; padding: 2px 0 0; margin: 0 var(--line_width) 10px;
+			span { 
+                background: var(--timeline_year_color_bg,var(--timeline_year_color_bg_default)); 
+                color: var(--timeline_year_color_text,var(--timeline_year_color_text_default));
+                padding: 5px 10px; 
+                border-radius: 3px;
+            }
+		}
+		.text { padding: 2px 0 50px; margin: 0 var(--line_width); }
+		i { background: var(--timeline_lines_color_bg,var(--timeline_lines_color_bg_default)); width: 12px; height: 12px; border-radius: 100%; position: absolute; right: 0; top: 4px; margin-right: -6px; 
+			&.bottom { display: none;}
+		}
+		&:nth-child(odd) {
+			@include item_right;
+		}
+		&:last-child i.bottom { top: auto; display: inline-block; }
+	}
+	&.ivp_active {
+		.ce_timeline_single {
+			&:before { width: 0; opacity: 0; }
+			&.wivp:before { width: var(--line_width); opacity: 1; transition: all 1s ease-in-out; }
+			.year { display: inline-block; opacity: 0; position: relative; transform: scale(0.8); transform-origin: center; }
+			&.wivp .year { opacity: 1; transform: scale(1); transition: all 1s ease-in-out; transition-delay: .5s; }
+			.text { opacity: 0; top: 50px; position: relative; }
+			&.wivp .text { opacity: 1; top: 0; transition: all 1.5s ease-in-out; transition-delay: 1s; }
+		}
+	}
+}

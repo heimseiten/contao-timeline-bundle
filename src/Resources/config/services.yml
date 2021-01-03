@@ -1,0 +1,10 @@
+services:
+
+
+    # Contao content element Heimseiten\ContaoTimelineBundle\Controller\ContentElement\TimelineElementController
+    Heimseiten\ContaoTimelineBundle\Controller\ContentElement\TimelineElementController:
+        tags:
+            - { name: contao.content_element, category: texts, template: ce_timeline_element, type: timeline_element }
+            - { name: container.service_subscriber }
+        public: true
+

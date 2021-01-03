@@ -1,0 +1,12 @@
+<?php $this->block('content'); ?>
+
+<div class="ce_timeline_single block ce_<?php echo $this->id; ?> <?php echo $this->class ?> ivp" style="--timeline_lines_color_bg:<?php if($this->timeline_lines_color_bg!=''){ echo '#'.$this->timeline_lines_color_bg; } ?>;">
+    <div class="inside">
+        <i></i>
+        <div class="year" style="--timeline_year_color_bg:<?php if($this->timeline_year_color_bg!=''){ echo '#'.$this->timeline_year_color_bg; }; ?>; --timeline_year_color_text:<?php if($this->timeline_year_color_text!=''){ echo '#'.$this->timeline_year_color_text; }; ?>; "><span><?= $this->headline ?></span></div>
+        <div class="text"><?= $this->text ?></div> 
+        <i class="bottom"></i>
+    </div>
+</div>
+
+<?php $this->endblock(); ?>
