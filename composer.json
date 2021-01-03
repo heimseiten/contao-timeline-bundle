@@ -1,11 +1,9 @@
 {
     "name": "heimseiten/contao-timeline-bundle",
-    "description": "animated vertical Timeline",
+    "description": "animated vertical timeline",
     "keywords": [
-        "contao",
-        "bundle",
-        "tag 3",
-        "tag 4"
+        "vanilla",
+        "Geschichte"
     ],
     "type": "contao-bundle",
     "license": "GPL-3.0-or-later",
@@ -23,7 +21,7 @@
     },
     "require": {
         "contao/core-bundle": "^4.0",
-        "heimseiten/contao-inviewport-bundle": "^1.0",
+        "heimseiten/contao-inviewport-bundle": "^1.0"
     },
     "require-dev": {
         "contao/easy-coding-standard": "^3.0",
