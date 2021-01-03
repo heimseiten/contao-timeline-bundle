@@ -47,5 +47,5 @@
     },
     "extra": {
         "contao-manager-plugin": "Heimseiten\\ContaoTimelineBundle\\ContaoManager\\Plugin"
-    },
+    }
 }
