@@ -11,7 +11,7 @@ body {
 		--timeline_lines_color_bg_default: #989898;
 		--timeline_year_color_text_default: #fff;
 		--timeline_year_color_bg_default: #d10000;
-		@media(max-width:767px){ width: 100%; @include item_right; margin: 0 5% !important; }
+		@media(max-width:1023px){ width: 100%; @include item_right; margin: 0 5% !important; }
 		.inside { max-width: 700px; display: inline-block; }
 		&:before { content: ''; position: absolute; right: 0; top: 10px; height: 1px; background: var(--timeline_lines_color_bg,var(--timeline_lines_color_bg_default)); width: var(--line_width); }
 		&:after { content: ''; width: 2px; background: var(--timeline_lines_color_bg,var(--timeline_lines_color_bg_default)); position: absolute; top: 4px; right: -1px; height: 100%; margin-left: -1px; }
