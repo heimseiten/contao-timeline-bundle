@@ -1,8 +1,10 @@
 {
     "name": "heimseiten/contao-timeline-bundle",
-    "description": "animated vertical timeline",
+    "description": "Animated vertical timeline in pure JavaScript.",
     "keywords": [
         "vanilla",
+        "timeline",
+        "history",
         "Geschichte"
     ],
     "type": "contao-bundle",
