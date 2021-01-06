@@ -1,3 +1,5 @@
+<?php if (TL_MODE == 'FE') { $GLOBALS['TL_CSS'][] = 'bundles/heimseitencontaotimeline/timeline.scss|static'; } ?>
+
 <?php $this->block('content'); ?>
 
 <div class="ce_timeline_single block ce_<?php echo $this->id; ?> <?php echo $this->class ?> ivp" style="--timeline_lines_color_bg:<?php if($this->timeline_lines_color_bg!=''){ echo '#'.$this->timeline_lines_color_bg; } ?>;">
