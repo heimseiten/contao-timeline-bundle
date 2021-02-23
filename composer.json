@@ -22,7 +22,7 @@
         "source": "https://github.com/heimseiten/contao-timeline-bundle"
     },
     "require": {
-        "contao/core-bundle": "^4.4",
+        "contao/core-bundle": "^4.9",
         "heimseiten/contao-inviewport-bundle": "^1.0"
     },
     "require-dev": {
