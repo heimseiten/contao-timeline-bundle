@@ -1,6 +1,7 @@
 body {
 	@mixin item_right { 
 		margin-left: auto; margin-right: 0; text-align: left; 
+		.inside { text-align: left; }
 		&:before { left: 0; right: auto; }
 		&:after { left: 0; right: auto; }
 		i { right: auto; left: -6px; }
