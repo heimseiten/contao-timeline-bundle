@@ -13,7 +13,9 @@ body {
 		--timeline_year_color_text_default: #fff;
 		--timeline_year_color_bg_default: #d10000;
 		@media(max-width:1023px){ width: 100%; @include item_right; margin: 0 5% !important; }
-		.inside { max-width: 700px; display: inline-block; text-align: right; }
+		.inside { max-width: 700px; display: inline-block; text-align: right; 
+			@media(max-width:1023px){ text-align: left; }
+		}
 		&:before { content: ''; position: absolute; right: 0; top: 10px; height: 1px; background: var(--timeline_lines_color_bg,var(--timeline_lines_color_bg_default)); width: var(--line_width); }
 		&:after { content: ''; width: 2px; background: var(--timeline_lines_color_bg,var(--timeline_lines_color_bg_default)); position: absolute; top: 4px; right: -1px; height: 100%; margin-left: -1px; }
 		.year { position: relative; top: -5px; padding: 2px 0 0; margin: 0 var(--line_width) 10px;
