@@ -30,7 +30,11 @@ class TimelineElementController extends AbstractContentElementController
      */
     protected function getResponse(Template $template, ContentModel $model, Request $request): ?Response
     {
-        $template->text = $model->text;
+        //$template->text = $model->text;
+        
+        //$template->text = deserialize($model->cssID)[1];
+        $template->timeline_year = $GLOBALS['TL_LANG']['tl_content']['timeline_year'][0] . ': ' . $model->timeline_year;
+        $template->text = $GLOBALS['TL_LANG']['tl_content']['text'][0] . ': ' . $model->text;
 
         return $template->getResponse();
     }
