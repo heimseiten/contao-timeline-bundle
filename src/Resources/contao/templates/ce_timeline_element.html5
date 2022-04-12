@@ -10,6 +10,22 @@
         <i></i>
         <div class="year" style="<?php if($this->timeline_year_color_bg!=''){ echo '--timeline_year_color_bg:#'.$this->timeline_year_color_bg.'";'; }; ?> <?php if($this->timeline_year_color_text!=''){ echo '--timeline_year_color_text:#'.$this->timeline_year_color_text.';'; }; ?> "><span><?= $this->timeline_year ?></span></div>
         <div class="text"><?= $this->text ?></div> 
+        <div class="images">
+            <div class="wrapper">
+                <?php 
+                    $images = array_map('\StringUtil::binToUuid', deserialize( $this->orderSRC, true )); 
+                    foreach ( $images as $uuid ) {   
+                        echo $this->figure(
+                            $uuid, deserialize($this->size)[2], 
+                            [ 
+                                'enableLightbox' => true, 
+                                'lightboxGroupIdentifier' => 'lightbox', 
+                            ]
+                        ); 
+                    }            
+                ?>
+            </div> 
+        </div> 
         <i class="bottom"></i>
     </div>
 </div>
