@@ -34,12 +34,13 @@ body {
 		}
 		.images { padding: 2px 0 0px; margin: 0 var(--line_width); z-index: 9; position: relative; transition: transform 1s ease-in-out;
 			&:hover { transform: scale(1.0); }
-			.wrapper { display: flex; flex-wrap: wrap; justify-content: left; 
+			.wrapper { display: flex; flex-wrap: wrap; justify-content: right; 
 				.image_container { margin: 2px; }
 			}
 		}
 		&:nth-child(odd) {
 			@include item_right;
+			.images .wrapper { justify-content: left; }
 		}
 		&:last-child i.bottom { top: auto; display: inline-block; }
 	}
