@@ -13,7 +13,7 @@ body {
 		--timeline_year_color_text_default: #fff;
 		--timeline_year_color_bg_default: #d10000;
 		@media(max-width:1023px){ width: calc(100% - 5%); @include item_right; margin: 0 5% !important; }
-		.inside { max-width: 700px; display: inline-block; text-align: right; 
+		.inside { max-width: 700px; display: inline-block; text-align: right; padding-bottom: 40px;
 			@media(max-width:1023px){ text-align: left; }
 		}
 		&:before { content: ''; position: absolute; right: 0; top: 10px; height: 1px; background: var(--timeline_lines_color_bg,var(--timeline_lines_color_bg_default)); width: var(--line_width); }
@@ -26,9 +26,17 @@ body {
                 border-radius: 3px;
             }
 		}
-		.text { padding: 2px 0 50px; margin: 0 var(--line_width); @media(max-width:1023px){ margin-right: 0; } }
+		.text { padding: 2px 0 10px; margin: 0 var(--line_width); 
+			@media(max-width:1023px){ margin-right: 0; } 
+		}
 		i { background: var(--timeline_lines_color_bg,var(--timeline_lines_color_bg_default)); width: 12px; height: 12px; border-radius: 100%; position: absolute; right: 0; top: 4px; margin-right: -6px; 
 			&.bottom { display: none;}
+		}
+		.images { padding: 2px 0 0px; margin: 0 var(--line_width); z-index: 9; position: relative; transition: transform 1s ease-in-out;
+			&:hover { transform: scale(1.0); }
+			.wrapper { display: flex; flex-wrap: wrap; justify-content: left; 
+				.image_container { margin: 2px; }
+			}
 		}
 		&:nth-child(odd) {
 			@include item_right;
@@ -43,6 +51,8 @@ body {
 			&.wivp .year { opacity: 1; transform: scale(1); transition: all 1s ease-in-out; transition-delay: .5s; }
 			.text { opacity: 0; top: 50px; position: relative; }
 			&.wivp .text { opacity: 1; top: 0; transition: all 1.5s ease-in-out; transition-delay: 1s; }
+			.images .wrapper { opacity: 0; top: 50px; position: relative; }
+			&.wivp .images .wrapper { opacity: 1; top: 0; transition: all 2s ease-in-out; transition-delay: 1.5s; }
 		}
 	}
 }
