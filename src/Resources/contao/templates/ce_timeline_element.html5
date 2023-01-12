@@ -1,6 +1,6 @@
 <?php if (TL_MODE == 'FE') { 
     $GLOBALS['TL_CSS'][] = 'bundles/heimseitencontaotimeline/timeline.scss|static'; } 
-    $GLOBALS['TL_JAVASCRIPT'][] = 'bundles/heimseitencontaoinviewport/inViewport.js';
+    $GLOBALS['TL_HEAD'][] = '<script defer src="/bundles/heimseitencontaoinviewport/inViewport.js"></script>';
 ?>
 
 <?php $this->block('content'); ?>
