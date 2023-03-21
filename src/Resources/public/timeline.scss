@@ -46,14 +46,17 @@ body {
 	}
 	&.ivp_active {
 		.ce_timeline_single {
-			&:before { width: 0; opacity: 0; }
-			&.wivp:before { width: var(--line_width); opacity: 1; transition: all 1s ease-in-out; }
-			.year { display: inline-block; opacity: 0; position: relative; transform: scale(0.8); transform-origin: center; }
-			&.wivp .year { opacity: 1; transform: scale(1); transition: all 1s ease-in-out; transition-delay: .5s; }
-			.text { opacity: 0; top: 50px; position: relative; }
-			&.wivp .text { opacity: 1; top: 0; transition: all 1.5s ease-in-out; transition-delay: 1s; }
-			.images .wrapper { opacity: 0; top: 50px; position: relative; }
-			&.wivp .images .wrapper { opacity: 1; top: 0; transition: all 2s ease-in-out; transition-delay: 1.5s; }
+			&.ivp:not(.above_viewport):before { width: 0; opacity: 0; }
+			&.ivp.iivp:before { width: var(--line_width); opacity: 1; transition: all 1s ease-in-out; }
+			
+			&.ivp:not(.above_viewport) .year { display: inline-block; opacity: 0; position: relative; transform: scale(0.8); transform-origin: center; }
+			&.ivp.iivp .year { opacity: 1; transform: scale(1); transition: all 1s ease-in-out; transition-delay: .5s; }
+			
+			&.ivp:not(.above_viewport) .text { opacity: 0; top: 50px; position: relative; }
+			&.ivp.iivp .text { opacity: 1; top: 0; transition: all 1.5s ease-in-out; transition-delay: 1s; }
+			
+			&.ivp:not(.above_viewport) .images .wrapper { opacity: 0; top: 50px; position: relative; }
+			&.ivp.iivp .images .wrapper { opacity: 1; top: 0; transition: all 2s ease-in-out; transition-delay: 1.5s; }
 		}
 	}
 }
