@@ -5,6 +5,10 @@
 
 <?php $this->block('content'); ?>
 
+<?php 
+    use Contao\StringUtil;  
+?>
+
 <div class="ce_timeline_single block ce_<?php echo $this->id; ?> <?php echo $this->class ?> ivp" <?php if($this->timeline_lines_color_bg!=''){ echo 'style="--timeline_lines_color_bg:#'.$this->timeline_lines_color_bg.'";'; } ?>>
     <div class="inside">
         <i></i>
@@ -13,10 +17,10 @@
         <div class="images">
             <div class="wrapper">
                 <?php 
-                    $images = array_map('\StringUtil::binToUuid', deserialize( $this->orderSRC, true )); 
+                    $images = array_map('\StringUtil::binToUuid', StringUtil::deserialize( $this->orderSRC, true )); 
                     foreach ( $images as $uuid ) {   
                         echo $this->figure(
-                            $uuid, deserialize($this->size)[2], 
+                            $uuid, StringUtil::deserialize($this->size)[2], 
                             [ 
                                 'enableLightbox' => true, 
                                 'lightboxGroupIdentifier' => 'lightbox', 
