@@ -28,7 +28,7 @@ class TimelineElementController extends AbstractContentElementController
     /**
      * Generate the content element
      */
-    protected function getResponse(Template $template, ContentModel $model, Request $request): ?Response
+    protected function getResponse(Template $template, ContentModel $model, Request $request): Response
     {
         $template->text = $model->text;
         
