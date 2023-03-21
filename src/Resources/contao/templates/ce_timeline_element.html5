@@ -17,7 +17,7 @@
         <div class="images">
             <div class="wrapper">
                 <?php 
-                    $images = array_map('\StringUtil::binToUuid', StringUtil::deserialize( $this->orderSRC, true )); 
+                    $images = StringUtil::deserialize( $this->multiSRC, true ); 
                     foreach ( $images as $uuid ) {   
                         echo $this->figure(
                             $uuid, StringUtil::deserialize($this->size)[2], 
