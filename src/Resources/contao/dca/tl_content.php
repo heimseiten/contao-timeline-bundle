@@ -22,6 +22,5 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['timeline_year'] = [
     'sql'       => "char(255) NOT NULL default ''"
 ];
 
-$GLOBALS['TL_DCA']['tl_content']['fields']['headline']['eval']['tl_class'] = 'w50';
 $GLOBALS['TL_DCA']['tl_content']['fields']['text']['eval']['tl_class'] = 'clr';
 $GLOBALS['TL_DCA']['tl_content']['fields']['multiSRC']['eval']['isGallery'] = true;
