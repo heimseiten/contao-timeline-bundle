@@ -11,6 +11,16 @@ PaletteManipulator::create()
     ->addField('text', 'timeline_legend_content', PaletteManipulator::POSITION_APPEND)
     ->addField('multiSRC', 'timeline_legend_content', PaletteManipulator::POSITION_APPEND)
     ->addField('size', 'timeline_legend_content', PaletteManipulator::POSITION_APPEND)
+
+    ->addLegend('protected_legend', 'timeline_legend_content', PaletteManipulator::POSITION_APPEND)
+    ->addField('protected', 'protected_legend', PaletteManipulator::POSITION_APPEND)
+    
+    ->addLegend('expert_legend', 'protected_legend', PaletteManipulator::POSITION_APPEND)
+    ->addField('cssID', 'expert_legend', PaletteManipulator::POSITION_APPEND)
+    
+    ->addLegend('invisible_legend', 'expert_legend', PaletteManipulator::POSITION_APPEND)
+    ->addField('invisible', 'invisible_legend', PaletteManipulator::POSITION_APPEND)
+
     
     ->applyToPalette('default', 'tl_content')
 ;
