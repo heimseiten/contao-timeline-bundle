@@ -39,7 +39,8 @@
 			padding: 0
 		}
 		img {
-			max-width: 490px;
+			width: 490px;
+			max-width: 100%;
 			display: inline-block;
 		}
 		& > div:nth-child(1) { order: 1; }
